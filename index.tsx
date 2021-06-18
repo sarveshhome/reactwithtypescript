@@ -12,7 +12,8 @@ class App extends Component<AppProps, AppState> {
   constructor(props) {
     super(props);
     this.state = {
-      name: 'React'
+      name: 'React',
+      PersonName: 'Sarvesh'
     };
   }
 
@@ -21,7 +22,8 @@ class App extends Component<AppProps, AppState> {
       <div>
         <Hello name={this.state.name} />
         <p>Start editing to see some magic happen :)</p>
-        <Person name="sarvesh" />
+        {/* <Person name="sarvesh" /> */}
+        <Person name={this.state.PersonName} />
       </div>
     );
   }
