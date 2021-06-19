@@ -3,6 +3,7 @@ import { render } from 'react-dom';
 import Hello from './Hello';
 import './style.css';
 import Person from './Person';
+import Book from './Book.js';
 interface AppProps {}
 interface AppState {
   name: string;
@@ -13,7 +14,8 @@ class App extends Component<AppProps, AppState> {
     super(props);
     this.state = {
       name: 'React',
-      PersonName: 'Sarvesh'
+      PersonName: 'Sarvesh',
+      BookName: 'C# Boook'
     };
   }
 
@@ -24,6 +26,7 @@ class App extends Component<AppProps, AppState> {
         <p>Start editing to see some magic happen :)</p>
         {/* <Person name="sarvesh" /> */}
         <Person name={this.state.PersonName} />
+        <Book name={this.state.BookName} />
       </div>
     );
   }
