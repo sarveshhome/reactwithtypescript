@@ -14,14 +14,19 @@ import {
 
 const Address = () => {
   const [contaddres, setCountaddress] = useState();
-  const [componentcall, setComponetcall] = useState([]);
+  const [componentcall, setComponentcall] = useState([]);
+  const [values, setValues] = useState('');
+  useEffect(() => {
+    setValues('<div>hello</div>');
+  }, []);
   const addressHandler = event => {
-    return <AddressEnter />;
+    const final = [...componentcall, { data: values }];
+    setComponentcall(final);
   };
 
   return (
     <div>
-      {addressHandler()}
+      {componentcall}
       <Button variant="primary" onClick={addressHandler} type="submit">
         + New Address
       </Button>
