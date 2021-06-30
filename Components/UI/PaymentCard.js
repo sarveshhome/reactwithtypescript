@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Cards from 'react-credit-cards';
 
 const PaymetCard = () => {
