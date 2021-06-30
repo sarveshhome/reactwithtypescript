@@ -1,3 +1,4 @@
+import React from 'react';
 import { NavLink } from 'react-router-dom';
 import stylescss from './Header.module.css';
 
@@ -16,11 +17,11 @@ const Header = () => {
               Address
             </NavLink>
           </li>
-          <li>
+          {/* <li>
             <NavLink activeClassName={stylescss.active} to="/PaymentCard">
               Payment Card
             </NavLink>
-          </li>
+          </li> */}
         </ul>
       </nav>
     </header>
