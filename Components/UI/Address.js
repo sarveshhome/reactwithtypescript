@@ -17,10 +17,12 @@ const Address = () => {
   const [componentcall, setComponentcall] = useState([]);
   const [values, setValues] = useState('');
   useEffect(() => {
-    setValues('<div>hello</div>');
+    setValues('2');
   }, []);
   const addressHandler = event => {
+    event.preventDefault();
     const final = [...componentcall, { data: values }];
+    console.log(final);
     setComponentcall(final);
   };
 
