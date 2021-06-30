@@ -2,6 +2,7 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 import styles from './Todo.module.css';
 import AddressEnter from './AddressEnter.js';
+import ReactHtmlParser from 'react-html-parser';
 import {
   Container,
   Form,
@@ -15,10 +16,11 @@ import {
 const Address = () => {
   const [contaddres, setCountaddress] = useState();
   const [componentcall, setComponentcall] = useState([]);
-  const [values, setValues] = useState('');
+  const [values, setValues] = useState();
   const [count, setCount] = useState(0);
   useEffect(() => {
-    setValues('<div><h1>hello</h1></div>');
+    setValues('<div><h1><input name="Name"  type="text"/></h1></div>');
+    //setValues(<AddressEnter />);
   }, []);
   const addressHandler = event => {
     event.preventDefault();
@@ -36,9 +38,7 @@ const Address = () => {
     <div>
       {componentcall &&
         componentcall.map(data => (
-          <span key={data.id}>
-            dangerouslySetInnerHTML={{ __html: htmlDecode(data.data) }}
-          </span>
+          <span key={data.id}>{ReactHtmlParser(data.data)}</span>
         ))}
       <Button variant="primary" onClick={addressHandler} type="submit">
         + New Address
