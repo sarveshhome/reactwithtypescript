@@ -14,7 +14,7 @@ import {
 
 const Address = () => {
   const [contaddres, setCountaddress] = useState();
-
+  const [componentcall, setComponetcall] = useState([]);
   const addressHandler = event => {
     return <AddressEnter />;
   };
