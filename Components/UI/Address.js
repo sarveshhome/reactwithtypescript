@@ -28,7 +28,12 @@ const Address = () => {
 
   return (
     <div>
-      {componentcall}
+      {       
+           componentcall && componentcall.map((data)=>
+           (   
+               <span key={data.id}> {data.todovalue}<span/>
+           ))               
+      }  
       <Button variant="primary" onClick={addressHandler} type="submit">
         + New Address
       </Button>
