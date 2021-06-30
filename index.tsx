@@ -43,7 +43,7 @@ class App extends Component<AppProps, AppState> {
             <Route path="/Address" exact>
               <Address />
             </Route>
-            <Route>
+            <Route path="/PaymentCard" exact>
                <PaymetCard>
               </Route>
           </Switch>

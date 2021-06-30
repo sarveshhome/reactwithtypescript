@@ -17,11 +17,11 @@ const Header = () => {
               Address
             </NavLink>
           </li>
-          {/* <li>
-            <NavLink activeClassName={stylescss.active} to="/PaymentCard">
+          <li>
+            <NavLink activeClassName="active" to="/PaymentCard">
               Payment Card
             </NavLink>
-          </li> */}
+          </li>
         </ul>
       </nav>
     </header>
