@@ -4,11 +4,12 @@ import Hello from './Hello';
 import './style.css';
 import Person from './Person';
 import Book from './Book.js';
-import Header from './Components/share/Header.js';
-import Address from './Components/UI/Address.js';
 import Home from './Components/UI/Home.js';
 import { Route, Switch } from 'react-router-dom';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
+import Header from './Components/share/Header.js';
+import Address from './Components/UI/Address.js';
+
 interface AppProps {}
 interface AppState {
   name: string;
@@ -28,12 +29,6 @@ class App extends Component<AppProps, AppState> {
     return (
       <div>
         <Header />
-        <Hello name={this.state.name} />
-        <p>Start editing to see some magic happen :)</p>
-        {/* <Person name="sarvesh" /> */}
-        <Person name={this.state.PersonName} />
-        <Book name={this.state.BookName} />
-
         <Switch>
           <Route path="/" exact>
             <Home />
@@ -50,4 +45,11 @@ class App extends Component<AppProps, AppState> {
   }
 }
 
-render(<App />, document.getElementById('root'));
+render(
+  <React.StrictMode>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </React.StrictMode>,
+  document.getElementById('root')
+);
