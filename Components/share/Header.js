@@ -1,27 +1,27 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import stylescss from './Header.module.css';
+import './Header.module.css';
 
 const Header = () => {
   return (
-    <header className={stylescss.header}>
+    <header className="header">
       <nav>
-        <ul className={stylescss.sidenav}>
+        <ul className="sidenav">
           <li>
-            <NavLink activeClassName={stylescss.active} to="/home">
+            <NavLink activeClassName="active" to="/home">
               Home
             </NavLink>
           </li>
           <li>
-            <NavLink activeClassName={stylescss.active} to="/Address">
+            <NavLink activeClassName="active" to="/Address">
               Address
             </NavLink>
           </li>
-          {/* <li>
-            <NavLink activeClassName={stylescss.active} to="/PaymentCard">
+          <li>
+            <NavLink activeClassName="active" to="/PaymentCard">
               Payment Card
             </NavLink>
-          </li> */}
+          </li>
         </ul>
       </nav>
     </header>
