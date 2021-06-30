@@ -1,0 +1,33 @@
+.todo {
+  margin: 5px;
+  padding: 5px;
+}
+
+/*textbox*/
+.todo input[type='text'],
+select,
+textarea {
+  width: 30%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+  float: left;
+}
+
+/*button*/
+.todo input[type='submit'] {
+  background-color: #4caf50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: left;
+}
+
+.todolist {
+}
+
+.buttonsubmit {
+}
