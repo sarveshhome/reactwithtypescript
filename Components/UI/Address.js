@@ -16,14 +16,16 @@ const Address = () => {
   const [contaddres, setCountaddress] = useState();
   const [componentcall, setComponentcall] = useState([]);
   const [values, setValues] = useState('');
+  const [count, setCount] = useState(0);
   useEffect(() => {
     setValues('2');
   }, []);
   const addressHandler = event => {
     event.preventDefault();
-    const final = [...componentcall, { data: values }];
+    const final = [...componentcall, { id: count, data: values }];
     console.log(final);
     setComponentcall(final);
+    setCount(count + 1);
   };
 
   return (
