@@ -10,7 +10,7 @@ import { Route, Switch } from 'react-router-dom';
 import { BrowserRouter } from 'react-router-dom';
 import Header from './Components/share/Header.js';
 import Address from './Components/UI/Address.js';
-import PaymetCard from './Components/UI/PaymetCard.js';
+import PaymetCard from './Components/UI/PaymentCard.js';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 interface AppProps {}
@@ -44,8 +44,8 @@ class App extends Component<AppProps, AppState> {
               <Address />
             </Route>
             <Route path="/PaymentCard" exact>
-               <PaymetCard>
-              </Route>
+              <PaymetCard />
+            </Route>
           </Switch>
         </main>
       </div>
