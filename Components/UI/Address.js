@@ -19,7 +19,9 @@ const Address = () => {
   const [values, setValues] = useState();
   const [count, setCount] = useState(0);
   useEffect(() => {
-    setValues('<div><h1><input name="Name"  type="text"/></h1></div>');
+    setValues(
+      '<label for="Addrestype">Address type&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Country</label><br /><select id="Addrestype" name="address type"><option value="of1">Office</option><option value="ho1">Home</option></select>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<select name="ddlCountry"><option value="IN">India</option><option value="USA">United state</option><option value="uk">United Kingdom</option></select>'
+    );
     //setValues(<AddressEnter />);
   }, []);
   const addressHandler = event => {
